@@ -32,7 +32,7 @@ curl -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0
 
 
 
-## Zoek ticket:
+## Zoek een ticket:
 ```bash
 curl -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0ouIUhKGl0DIRiuB" http://localhost:8080/api/v1/tickets/search?query={search string}&limit=10
 ```
