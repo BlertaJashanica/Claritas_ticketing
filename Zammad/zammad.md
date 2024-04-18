@@ -3,7 +3,7 @@
 ## Aanmaken van een ticket:
 
 ```bash
-curl -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0ouIUhKGl0DIRiuB" http://localhost:8080/api/v1/tickets -H "Content-Type: application/json" -d '{ "title": "help!!!!", "group": "api", "customer": "api@claritas.net", "priority": "3 high", "article": { "subject": "onderwerp", "body": "u broek staat open", "type": "note", "internal": false } }'
+curl -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0ouIUhKGl0DIRiuB" http://localhost:8080/api/v1/tickets -H "Content-Type: application/json" -d '{ "title": "ticket1TEST", "group": "api", "customer": "api@claritas.net", "priority": "3 high", "article": { "subject": "onderwerp", "body": "ticket1 werkt", "type": "note", "internal": false } }'
 
 ```
 
@@ -11,7 +11,7 @@ curl -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0
 
 ## Updaten van een ticket:
 ```bash
-curl -X PUT -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0ouIUhKGl0DIRiuB" http://localhost:8080/api/v1/tickets/3 -H "Content-Type: application/json" -d '{"title": "No help for you","group": "api","state": "open","priority": "3 high","article": { "subject": "Update via API", "body": "Heres my reason for updating this ticket...", "internal": true}}'
+curl -X PUT -H "Authorization: Bearer 9ID_EF69Jl0tgPs32TfOXxWCTcVbVCo_jYD5fJvAzML1mJHn0ouIUhKGl0DIRiuB" http://localhost:8080/api/v1/tickets/3 -H "Content-Type: application/json" -d '{"title": "ticket1TEST","group": "api","state": "open","priority": "3 high","article": { "subject": "Update via API", "body": "Ticket1TEST", "internal": true}}'
 
 ```
 
