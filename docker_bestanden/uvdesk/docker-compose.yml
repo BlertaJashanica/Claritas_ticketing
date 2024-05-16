@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    image: "mysql:5.7"
+    volumes:
+      - ./uvdesk/db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: uvdesk
+      MYSQL_ROOT_PASSWORD: "UarV5G7koa2z61xUarV5G7koa2z61x"
+      MYSQL_USER: "uvdesk"
+      MYSQL_PASSWORD: "UarV5G7koa2z61x"
+  uvdesk:
+    image: nuttcorp/uvdesk:latest
+    depends_on:
+      - db
+    tty: true
+    environment:
+        MYSQL_USER: "uvdesk"
+        MYSQL_PASSWORD: "UarV5G7koa2z61x"
+        MYSQL_ROOT_PASSWORD: "UarV5G7koa2z61xUarV5G7koa2z61x"
+        MYSQL_DATABASE: uvdesk
+    ports:
+        - 80:80
+
+volumes:
+  db_data: {}
