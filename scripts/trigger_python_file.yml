@@ -1,0 +1,8 @@
+---
+- name: Run Python script with arguments
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Execute Python script
+      ansible.builtin.shell:
+        cmd: "python /home/clari-group5/scripts/inv_init.py 'databases:10.1.1.0/24,networks:10.1.2.0/24'"
