@@ -1,0 +1,22 @@
+---
+- name: Ask user for input and store in environment variable
+  hosts: localhost
+  vars:
+    variable: ""  # Default value for the variable
+  tasks:
+    - name: Prompt user for input
+      ansible.builtin.pause:
+        prompt: "Enter a string: "
+      register: user_input
+
+    - name: Set environment variable
+      ansible.builtin.set_fact:
+        variable: "{{ user_input.user_input }}"
+
+    - name: Print the value of the environment variable
+      ansible.builtin.debug:
+        msg: "Value of variable: {{ variable }}"
+
+    # Debugging task to print the value of the environment variable
+    - name: Debug environment variable
+      ansible.builtin.shell: echo $variable
