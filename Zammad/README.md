@@ -75,22 +75,18 @@ Een ticket kan je laten aanmaken door een POST request te sturen met een json bo
 (Verplichte attributen zijn aangeduid met een ‘*’) 
 | Attribuut        | Beschrijving                                                                                                 | Waarden                                                                                 |
 |------------------|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| **title**        | De titel van het ticket.                                                                                    | -                                                                                       |
-| **customer**     | De verantwoordelijke voor het aanmaken van het ticket, dit is altijd api@claritas.net.                      | api@claritas.net                                                                        |
-| **group**        | De groep waar het ticket aan toebehoort. Dit is altijd api.                                                 | api                                                                                     |
+| **title**        | De titel van het ticket.                                                                                    | string                                                                                  |
+| **customer**     | De verantwoordelijke voor het aanmaken van het ticket, dit is altijd api@claritas.net.                      | "api@claritas.net"                                                                      |
+| **group**        | De groep waar het ticket aan toebehoort. Dit is altijd api.                                                 | "api"                                                                                   |
 | **priority**     | De prioriteit van het ticket, kies tussen 1 low, 2 normal en 3 high.                                        | 1 low, 2 normal, 3 high                                                                 |
-| **article**      | Hierin specifieer je attributen over de inhoud van het ticket, zoals subject en body.                       | -                                                                                       |
+| **article**      | Hierin specifieer je attributen over de inhoud van het ticket, zoals subject en body.                       | article                                                                                 |
 | **state**        | De state van het ticket, standaardwaarde is new, andere opties zijn open en closed.                         | new, open, closed                                                                       |
-| **subject**      | Het onderwerp van het ticket.                                                                               | -                                                                                       |
-| **body**         | De inhoud van het ticket.                                                                                   | -                                                                                       |
-| **type**         | Het type communicatie dat het ticket voortbrengt. Het type zal altijd note zijn.                            | note                                                                                    |
-| **internal**     | Bepaal of het ticket zichtbaar is voor customers of niet. Mogelijkheden zijn true of false.                 | true, false                                                                             |
 
 Bijkomende attributen voor het `article` attribuut:
 | Attribuut        | Beschrijving                                                                                                 | Waarden                                                                                 |
 |------------------|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| **subject**      | Het onderwerp van het ticket.                                                                               | -                                                                                       |
-| **body**         | De inhoud van het ticket.                                                                                   | -                                                                                       |
-| **type**         | Het type communicatie dat het ticket voortbrengt. Het type zal altijd note zijn.                            | note                                                                                    |
+| **subject**      | Het onderwerp van het ticket.                                                                               | string                                                                                  |
+| **body**         | De inhoud van het ticket.                                                                                   | string                                                                                  |
+| **type**         | Het type communicatie dat het ticket voortbrengt. Het type zal altijd note zijn.                            | "note"                                                                                  |
 | **internal**     | Bepaal of het ticket zichtbaar is voor customers of niet. Mogelijkheden zijn true of false.                 | true, false                                                                             |
 
