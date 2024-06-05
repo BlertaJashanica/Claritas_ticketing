@@ -92,7 +92,9 @@ Bijkomende attributen voor het `article` attribuut:
 
 
 ### Voorbeelden voor het werken met de api:
-```curl -H "Authorization: Bearer TOKEN" http://localhost:8080/api/v1/tickets -H "Content-Type: application/json" -d '{ "title": "Help!!", "group": "api", "customer": "api@claritas.net", "priority": "3 high", "article": { "subject": "Onderwerp", "body": "Er is een groot probleem", "type": "note", "internal": false } }' ```
+```
+curl -H "Authorization: Bearer TOKEN" http://localhost:8080/api/v1/tickets -H "Content-Type: application/json" -d '{ "title": "Help!!", "group": "api", "customer": "api@claritas.net", "priority": "3 high", "article": { "subject": "Onderwerp", "body": "Er is een groot probleem", "type": "note", "internal": false } }'
+```
 
  
 
