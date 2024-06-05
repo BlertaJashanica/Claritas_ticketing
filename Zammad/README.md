@@ -119,3 +119,8 @@ Ten slotte kan je tickets verwijderen door een DELETE request te sturen naar het
 ```
 curl -X DELETE -H "Authorization: Bearer TOKEN" http://localhost:8080/api/v1/tickets/2
 ``` 
+
+## Workflow 
+Het ticketing systeem communiceert met drie componenten binnen Claritas: monitoring, alarming en threat analysis. Monitoring en threat analysis zijn verantwoordelijk voor het detecteren van problemen in het systeem, en eens deze optreden maken ze aan de hand van onze api een ticket aan. Alarming laat vervolgens acties uitvoeren op basis van aangemaakte tickets, zoals berichten uitsturen, alarmen laten afgaan, ... 
+
+Wanneer een ticket wordt aangemaakt, zal deze een prioriteit, titel, onderwerp en bericht meekrijgen. Het ticket zal meestal ook gebonden worden aan een specifieke machine, en het is mogelijk om bijvoorbeeld alle tickets te raadplegen die bij een specifieke machine horen.  
