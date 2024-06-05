@@ -73,3 +73,8 @@ curl -H "Authorization: Bearer TOKEN" http://localhost:8080/api/v1/tickets
 Een ticket kan je laten aanmaken door een POST request te sturen met een json body met alle nodige attributen, die zijn als volgt: 
 
 (Verplichte attributen zijn aangeduid met een ‘*’) 
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
